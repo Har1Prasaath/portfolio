@@ -408,7 +408,7 @@ footer h3 {
 }
 
 .about-content {
-    flex: 0 1 575px; /* Fixed width for left side */
+    flex: 0 1 575px; 
     text-align: left;
     margin-top: 30px;
 }
@@ -482,6 +482,96 @@ footer h3 {
 .pdf-click-overlay:hover .pdf-open-icon {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Slideshow Styles */
+.slideshow-section {
+    padding: 60px 0;
+    background-color: #f0f7ff;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 500px;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.slideshow-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slideshow-nav:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #0066cc;
+}
+
+.slideshow-nav.prev {
+    left: 15px;
+}
+
+.slideshow-nav.next {
+    right: 15px;
+}
+
+.slideshow-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #0066cc;
 }
 
 /* Responsive adjustments for the about section */
@@ -569,5 +659,15 @@ footer h3 {
     
     nav ul li {
         margin: 5px 10px;
+    }
+    
+    .slides {
+        height: 250px;
+    }
+    
+    .slideshow-nav {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
     }
 }

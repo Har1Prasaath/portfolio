@@ -71,3 +71,103 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Image Slideshow Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    if (!slideshowContainer) return;
+    
+    // Array of image paths (in alphabetical order)
+    // Replace these with your actual image paths
+    const imagePaths = [
+        'assets/images/p1.png',
+        'assets/images/p2.png',
+        'assets/images/p3.png',
+        'assets/images/p4.png',
+        'assets/images/p5.png',
+        'assets/images/p6.png',
+        'assets/images/p7.png',
+        'assets/images/p8.png',
+        'assets/images/s1.png',
+        'assets/images/s2.png',
+        'assets/images/s3.png',
+        'assets/images/s4.png',
+        'assets/images/s5.png',
+        'assets/images/s6.png',
+        'assets/images/s7.png',
+        'assets/images/s8.png',
+        'assets/images/s9.png'
+    ];
+    
+    const slidesContainer = document.querySelector('.slides');
+    const dotsContainer = document.querySelector('.slideshow-dots');
+    let currentSlide = 0;
+    
+    // Create slides and dots
+    imagePaths.forEach((path, index) => {
+        // Create slide
+        const slide = document.createElement('div');
+        slide.className = 'slide';
+        
+        const img = document.createElement('img');
+        img.src = path;
+        img.alt = `Project Image ${index + 1}`;
+        
+        slide.appendChild(img);
+        slidesContainer.appendChild(slide);
+        
+        // Create dot
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        if (index === 0) dot.classList.add('active');
+        
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+        
+        dotsContainer.appendChild(dot);
+    });
+    
+    // Next and Previous buttons
+    const prevButton = document.querySelector('.slideshow-nav.prev');
+    const nextButton = document.querySelector('.slideshow-nav.next');
+    
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+    
+    function prevSlide() {
+        currentSlide = (currentSlide === 0) ? imagePaths.length - 1 : currentSlide - 1;
+        updateSlidePosition();
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide === imagePaths.length - 1) ? 0 : currentSlide + 1;
+        updateSlidePosition();
+    }
+    
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlidePosition();
+    }
+    
+    function updateSlidePosition() {
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update active dot
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+    
+    // Auto-advance slides every 5 seconds
+    let slideInterval = setInterval(nextSlide, 5000);
+    
+    // Pause auto-advance when hovering over slideshow
+    slideshowContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    
+    slideshowContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+});
