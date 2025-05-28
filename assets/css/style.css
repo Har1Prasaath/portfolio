@@ -408,8 +408,9 @@ footer h3 {
 }
 
 .about-content {
-    flex: 0 1 500px; /* Fixed width for left side */
+    flex: 0 1 575px; /* Fixed width for left side */
     text-align: left;
+    margin-top: 30px;
 }
 
 .about-content .intro-text {
@@ -532,7 +533,7 @@ footer h3 {
     }
     
     .intro-text {
-        font-size: 16px;
+        font-size: 14px;
         padding: 0 20px;
     }
     
