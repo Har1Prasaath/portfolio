@@ -17,6 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.add('active');
         });
     });
+
+    // Email copy functionality
+    const emailElement = document.getElementById('emailCopy');
+    const emailText = 'shwethahari005@gmail.com';
+    const copyIcon = document.getElementById('copyIcon');
+    const copyStatus = document.getElementById('copyStatus');
+    
+    if (emailElement) {
+        emailElement.addEventListener('click', function() {
+            navigator.clipboard.writeText(emailText)
+                .then(() => {
+                    copyIcon.style.display = 'none';
+                    copyStatus.textContent = 'Copied!';
+                    copyStatus.style.display = 'inline';
+                    
+                    setTimeout(() => {
+                        copyStatus.style.display = 'none';
+                        copyIcon.style.display = 'inline-block';
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+        });
+    }
 });
 
 // Smooth scrolling for anchor links
