@@ -1,0 +1,113 @@
+.skills {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.skills-category {
+    margin-bottom: 60px;
+}
+
+.skills-category h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.skills-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 3px;
+    background-color: #0066cc;
+    border-radius: 1.5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 25px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+    }
+    
+    .skill-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .skill-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 15px;
+    }
+    
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skill-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .skill-name {
+        font-size: 12px;
+    }
+}
