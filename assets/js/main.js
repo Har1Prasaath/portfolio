@@ -60,3 +60,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// PDF open in new tab functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const pdfOverlay = document.querySelector('.pdf-click-overlay');
+    
+    if (pdfOverlay) {
+        pdfOverlay.addEventListener('click', function() {
+            window.open('assets/resume.pdf', '_blank');
+        });
+    }
+});

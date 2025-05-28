@@ -3,122 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hari Prasaath | Portfolio</title>
+    <title>Hari Prasaath | About</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Hari Prasaath</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about" class="active">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Header for all pages -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1>Hari Prasaath</h1>
         </div>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- Main Content -->
     <main>
         <section id="about" class="hero">
-            <div class="container">
-                <div class="intro-text">
-                    <p>I'm an undergraduate Computer Science and Engineering student with practical experience in programming and
-                    software development. I've collaborated on diverse, team-based projects addressing real-world challenges,
-                    demonstrating strong problem-solving skills. Passionate about emerging technologies, I actively contribute to
-                    impactful solutions while continuously expanding my technical expertise.</p>
+            <div class="container about-container">
+                <div class="about-content">
+                    <div class="intro-text">
+                        <p>I'm an undergraduate Computer Science and Engineering student with practical experience in programming and
+                        software development. I've collaborated on diverse, team-based projects addressing real-world challenges,
+                        demonstrating strong problem-solving skills. Passionate about emerging technologies, I actively contribute to
+                        impactful solutions while continuously expanding my technical expertise.</p>
+                    </div>
+                    <a href="contact.html" class="cta-button">Get In Touch</a>
                 </div>
-                <a href="#contact" class="cta-button">Get In Touch</a>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
-                
-                <div class="experience-item">
-                    <h3>Full Stack Development Intern - Prasunet Tech</h3>
-                    <h4>Personalized Learning Management System</h4>
-                    <ul>
-                        <li>Developed a personalized learning management system that adapts course difficulty based on user progress</li>
-                        <li>Designed and implemented dynamic content delivery and user progress tracking using Firebase</li>
-                        <li>Integrated scalable backend services and responsive frontend interfaces to ensure seamless interaction and personalized content delivery</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <h3>Software Development Engineer Intern - Bluestock</h3>
-                    <h4>Web App Development</h4>
-                    <ul>
-                        <li>Developed backend and frontend components for a collaborative team-based Node.js application</li>
-                        <li>Implemented key functionalities, including user authentication, real-time data updates, and responsive UI designs</li>
-                        <li>Enhanced scalability and maintainability by following best practices in code structuring and modularization</li>
-                    </ul>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                
-                <div class="project-item">
-                    <h3>Smart Parking Management System</h3>
-                    <p><strong>Languages Used:</strong> JavaScript</p>
-                    <ul>
-                        <li>Designed and developed backend logic for a smart parking management system</li>
-                        <li>Implemented key functionalities, including parking slot allocation, real-time status tracking, and payment processing</li>
-                        <li>Streamlined algorithms and enhanced data structures to improve system efficiency and scalability</li>
-                    </ul>
-                </div>
-                
-                <div class="project-item">
-                    <h3>Supply Chain Management System</h3>
-                    <p><strong>Languages Used:</strong> Python</p>
-                    <ul>
-                        <li>Developed backend logic for a supply chain management system</li>
-                        <li>Optimized algorithms and data structures for efficiency and scalability</li>
-                        <li>Implemented demand forecasting, order processing, and delivery scheduling functionalities</li>
-                    </ul>
+                <div class="resume-viewer">
+                    <div class="pdf-click-overlay" title="Click to open PDF in new tab">
+                        <div class="pdf-open-icon">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Open PDF</span>
+                        </div>
+                    </div>
+                    <object data="assets/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+                        <div class="pdf-fallback">
+                            <p>It appears you don't have a PDF plugin for this browser. You can <a href="assets/resume.pdf" target="_blank">click here to download the PDF file.</a></p>
+                        </div>
+                    </object>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <h3>Contact Me</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/har1prasaath" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn: Hari Prasaath</a></li>
-                    <li>
-                        <div id="emailCopy" class="copy-email">
-                            <i class="fas fa-envelope"></i> Email: shwethahari005@gmail.com 
-                            <span class="copy-button">
-                                <i id="copyIcon" class="fas fa-copy"></i>
-                                <span id="copyStatus" style="display: none;">Copied!</span>
-                            </span>
-                        </div>
-                    </li>
-                    <li><a href="https://github.com/Har1Prasaath" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Hari Prasaath. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- New footer design for all pages -->
+<footer class="main-footer">
+    <div class="logo">
+        <h2>Hari Prasaath</h2>
+    </div>
+    
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="social-icons">
+        <a href="https://github.com/Har1Prasaath" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/har1prasaath" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:shwethahari005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    
+    <div class="copyright">
+        <p>&copy; 2025 Hari Prasaath. All rights reserved.</p>
+    </div>
+</footer>
 
     <script src="assets/js/main.js"></script>
 </body>
