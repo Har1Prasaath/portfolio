@@ -1,3 +1,6 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /* General Styles */
 * {
     margin: 0;
@@ -6,7 +9,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
@@ -119,6 +122,105 @@ nav ul li a:hover:after {
     color: #fff;
 }
 
+/* Experience Section */
+.experience {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #0066cc;
+}
+
+.experience-item {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.experience-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.experience-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0066cc;
+}
+
+.experience-item p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.experience-item ul {
+    padding-left: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.project-item {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0066cc;
+}
+
+.project-item p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.project-item ul {
+    padding-left: 20px;
+}
+
+.project-item li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;
@@ -192,6 +294,29 @@ footer h3 {
     .intro-text {
         font-size: 16px;
         padding: 0 20px;
+    }
+    
+    .experience {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .experience-item {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .projects {
+        padding: 50px 0;
+    }
+    
+    .project-item {
+        padding: 20px;
+        margin-bottom: 30px;
     }
 }
 
