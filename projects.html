@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hari Prasaath | Projects</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -19,6 +20,8 @@
                     <li><a href="index.html">About</a></li>
                     <li><a href="experience.html">Experience</a></li>
                     <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -32,29 +35,119 @@
             <div class="container">
                 <h2 class="section-title">Projects</h2>
                 
-                <div class="project-item">
-                    <h3>Smart Parking Management System</h3>
-                    <p><strong>Languages Used:</strong> JavaScript</p>
+                <div class="projects-grid">
+                    <!-- Smart Parking Project Card -->
+                    <div class="project-card" data-project="smart-parking">
+                        <div class="project-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Smart Parking Management System</h3>
+                        <p class="project-tech">JavaScript</p>
+                        <p class="project-brief">Real-time parking slot allocation and management system</p>
+                        <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    
+                    <!-- Supply Chain Project Card -->
+                    <div class="project-card" data-project="supply-chain">
+                        <div class="project-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Supply Chain Management System</h3>
+                        <p class="project-tech">Python</p>
+                        <p class="project-brief">Optimized supply chain logistics and tracking system</p>
+                        <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    
+                    <!-- NFA to DFA Project Card -->
+                    <div class="project-card" data-project="nfa-dfa">
+                        <div class="project-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>NFA to DFA Converter</h3>
+                        <p class="project-tech">Python</p>
+                        <p class="project-brief">Efficient automata conversion tool</p>
+                        <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    
+                    <!-- Chess Game Project Card -->
+                    <div class="project-card" data-project="chess">
+                        <div class="project-icon">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <h3>Terminal-Driven Chess Game</h3>
+                        <p class="project-tech">Java</p>
+                        <p class="project-brief">Command-line chess game with complete ruleset</p>
+                        <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    
+                    <!-- Water Meter Project Card -->
+                    <div class="project-card" data-project="water-meter">
+                        <div class="project-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Smart Water Meter System</h3>
+                        <p class="project-tech">SQL, HTML, CSS, JavaScript, Django</p>
+                        <p class="project-brief">Full-stack water usage monitoring solution</p>
+                        <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Popups -->
+        <div class="popup-overlay"></div>
+        
+        <!-- Smart Parking Popup -->
+        <div class="project-popup" id="smart-parking-popup">
+            <div class="popup-header">
+                <h3>Smart Parking Management System</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <div class="popup-tech">
+                    <span>Languages Used:</span> JavaScript
+                </div>
+                <div class="popup-details">
                     <ul>
                         <li>Designed and developed backend logic for a smart parking management system</li>
                         <li>Implemented key functionalities, including parking slot allocation, real-time status tracking, and payment processing</li>
                         <li>Streamlined algorithms and enhanced data structures to improve system efficiency and scalability</li>
                     </ul>
                 </div>
-                
-                <div class="project-item">
-                    <h3>Supply Chain Management System</h3>
-                    <p><strong>Languages Used:</strong> Python</p>
+            </div>
+        </div>
+        
+        <!-- Supply Chain Popup -->
+        <div class="project-popup" id="supply-chain-popup">
+            <div class="popup-header">
+                <h3>Supply Chain Management System</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <div class="popup-tech">
+                    <span>Languages Used:</span> Python
+                </div>
+                <div class="popup-details">
                     <ul>
                         <li>Developed backend logic for a supply chain management system</li>
                         <li>Optimized algorithms and data structures for efficiency and scalability</li>
                         <li>Implemented demand forecasting, order processing, and delivery scheduling functionalities</li>
                     </ul>
                 </div>
-
-                <div class="project-item">
-                    <h3>NFA to DFA Converter</h3>
-                    <p><strong>Languages Used:</strong> Python</p>
+            </div>
+        </div>
+        
+        <!-- NFA to DFA Popup -->
+        <div class="project-popup" id="nfa-dfa-popup">
+            <div class="popup-header">
+                <h3>NFA to DFA Converter</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <div class="popup-tech">
+                    <span>Languages Used:</span> Python
+                </div>
+                <div class="popup-details">
                     <ul>
                         <li>Built a Python-based converter optimizing state transition functions</li>
                         <li>Used sets and dictionaries to manage state transitions efficiently</li>
@@ -62,10 +155,20 @@
                         <li>Ensured reliability through extensive testing</li>
                     </ul>
                 </div>
-
-                <div class="project-item">
-                    <h3>Terminal-Driven Chess Game</h3>
-                    <p><strong>Languages Used:</strong> Java</p>
+            </div>
+        </div>
+        
+        <!-- Chess Game Popup -->
+        <div class="project-popup" id="chess-popup">
+            <div class="popup-header">
+                <h3>Terminal-Driven Chess Game</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <div class="popup-tech">
+                    <span>Languages Used:</span> Java
+                </div>
+                <div class="popup-details">
                     <ul>
                         <li>Developed a command-line chess game for two players</li>
                         <li>Implemented game logic, including valid moves, check, and checkmate conditions</li>
@@ -73,10 +176,20 @@
                         <li>Provided a user-friendly terminal interface</li>
                     </ul>
                 </div>
-
-                <div class="project-item">
-                    <h3>Smart Water Meter System</h3>
-                    <p><strong>Languages Used:</strong> SQL, HTML, CSS, JavaScript, Django</p>
+            </div>
+        </div>
+        
+        <!-- Water Meter Popup -->
+        <div class="project-popup" id="water-meter-popup">
+            <div class="popup-header">
+                <h3>Smart Water Meter System</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <div class="popup-tech">
+                    <span>Languages Used:</span> SQL, HTML, CSS, JavaScript, Django
+                </div>
+                <div class="popup-details">
                     <ul>
                         <li>Designed and implemented a full-stack smart water meter system</li>
                         <li>Developed backend algorithms for monitoring and analyzing water usage data</li>
@@ -84,7 +197,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Image Slideshow -->
         <section class="slideshow-section">
@@ -92,14 +205,14 @@
                 <h2 class="section-title">Project Gallery</h2>
                 <div class="slideshow-container">
                     <div class="slides">
-                        <!-- Images will be loaded dynamically -->
+                        <!-- Images loaded dynamically via JavaScript -->
                     </div>
                     
                     <button class="slideshow-nav prev"><i class="fas fa-chevron-left"></i></button>
                     <button class="slideshow-nav next"><i class="fas fa-chevron-right"></i></button>
                     
                     <div class="slideshow-dots">
-                        <!-- Dots will be added dynamically -->
+                        <!-- Dots added dynamically via JavaScript -->
                     </div>
                 </div>
             </div>
@@ -109,7 +222,7 @@
     <!-- Footer Section -->
     <footer class="main-footer">
         <div class="logo">
-            <h2>HP</h2>
+            <h2>Hari Prasaath</h2>
         </div>
         
         <nav class="footer-nav">
@@ -135,5 +248,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/projects.js"></script>
 </body>
 </html>
