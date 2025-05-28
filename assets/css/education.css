@@ -5,14 +5,14 @@
 
 .education-timeline {
     position: relative;
-    margin: 40px 0 80px;
+    margin: 40px 0 70px;
 }
 
 .education-timeline::before {
     content: '';
     position: absolute;
     top: 0;
-    left: calc(32px + 15px); /* Icon width/2 + margin */
+    left: 32px; /* Position exactly in the middle of the 64px icon */
     width: 2px;
     height: 100%;
     background-color: #e0e0e0;
@@ -23,7 +23,7 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 40px; /* Reduced from 50px */
 }
 
 .education-item:last-child {
@@ -50,10 +50,11 @@
 
 .education-content {
     background-color: #fff;
-    padding: 25px;
+    padding: 20px; /* Reduced from 25px */
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     flex: 1;
+    max-width: calc(100% - 80px); /* Limit max width to create smaller windows */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -93,13 +94,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    margin: 40px 0 70px;
+    margin: 35px 0 60px; /* Slightly reduced margins */
 }
 
 .certification-item {
     background-color: #fff;
     border-radius: 8px;
-    padding: 25px;
+    padding: 20px; /* Reduced from 25px */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -147,13 +148,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    margin: 40px 0;
+    margin: 35px 0; /* Slightly reduced margins */
 }
 
 .project-card {
     background-color: #fff;
     border-radius: 8px;
-    padding: 25px;
+    padding: 20px; /* Reduced from 25px */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
