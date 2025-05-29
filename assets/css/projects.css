@@ -239,6 +239,38 @@
     background: #aaa;
 }
 
+/* GitHub Button Styles */
+.github-button-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0066cc; /* Changed to match site accent color */
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.github-button i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.github-button:hover {
+    background-color: #004080; /* Darker shade of the accent color */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3); /* Shadow matches button color */
+    color: #fff;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .projects-grid {
