@@ -215,6 +215,34 @@
     transform: translateX(5px);
 }
 
+/* Back arrow button */
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back-arrow {
+    color: #0066cc;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 32px; /* Aligns with timeline icons */
+    text-align: center;
+}
+
+.back-arrow:hover {
+    transform: translateX(-5px);
+}
+
+.section-title {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 0; /* Override default margin */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .education-timeline::before {
