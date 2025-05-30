@@ -77,8 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideshowContainer = document.querySelector('.slideshow-container');
     if (!slideshowContainer) return;
     
-    // Array of image paths (in alphabetical order)
-    // Replace these with your actual image paths
     const imagePaths = [
         'assets/images/p1.png',
         'assets/images/p2.png',
@@ -169,5 +167,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
     slideshowContainer.addEventListener('mouseleave', () => {
         slideInterval = setInterval(nextSlide, 5000);
+    });
+});
+
+// Page animations using Intersection Observer API
+document.addEventListener('DOMContentLoaded', () => {
+    // Setup animation observer
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.1
+    });
+    
+    // Observe all elements with animation classes
+    const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-slide-right, .animate-scale');
+    animatedElements.forEach(element => {
+        element.style.animationPlayState = 'paused';
+        observer.observe(element);
     });
 });

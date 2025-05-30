@@ -1,0 +1,61 @@
+/* Common animations for all pages */
+
+/* Animation classes */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--delay, 0s));
+}
+
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--delay, 0s));
+}
+
+.animate-slide-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideRight 0.8s forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--delay, 0s));
+}
+
+.animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scale 0.7s forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--delay, 0s));
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -140,24 +140,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(style);
-    
-    // Enhance animations by triggering them based on scroll position
-    function handleIntersection(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
-                observer.unobserve(entry.target);
-            }
-        });
-    }
-    
-    const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.1
-    });
-    
-    const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
-    animatedElements.forEach(element => {
-        element.style.animationPlayState = 'paused';
-        observer.observe(element);
-    });
 });
